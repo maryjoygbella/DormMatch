@@ -11,10 +11,15 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-image: url('background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
         }
 
         .navbar {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8); 
             padding: 1rem;
         }
 
@@ -40,6 +45,10 @@
             margin: 0;
         }
 
+        .nav-item {
+            position: relative;
+        }
+
         .nav-item .nav-link {
             color: white;
             text-decoration: none;
@@ -52,10 +61,51 @@
             border-radius: 5px;
         }
 
+        .navbar-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(51, 51, 51, 0.8);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .nav-item:hover .dropdown-content {
+            display: block;
+        }
+
         .centered-section {
             text-align: center;
             padding: 2rem;
-            background-color: #f9f9f9;
+            background-color: rgba(249, 249, 249, 0.9);
+            margin: 2rem auto;
+            border-radius: 5px;
+            max-width: 600px;
         }
 
         .payment-form {
@@ -93,7 +143,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
             color: white;
             text-align: center;
             padding: 1rem;
@@ -108,19 +158,17 @@
                     <img src="logo.png" alt="DormMatch Logo" class="logo">
                 </a>
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
                     <li class="nav-item">
-                        <a href="#dorm" class="nav-link">Dorm</a>
+                        <a href="#" class="nav-link">Dorm</a>
                         <div class="dropdown-content">
                             <a href="dormsolo.html">Solo</a>
                             <a href="dormshared.html">Shared</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link">About Us</a></li>
                 </ul>
                 <div class="navbar-buttons">
-                    <button class="btn btn-login" id="login-button">Login</button>
-                    <button class="btn btn-signup" id="signup-button">Sign Up</button>
                     <a href="#account-profile" class="nav-link" id="account-profile" style="display: none;">Account Profile</a>
                     <button class="btn btn-logout" id="logout-button" style="display: none;">Log Out</button>
                 </div>
@@ -130,10 +178,10 @@
 
     <section id="payment" class="centered-section">
         <form class="payment-form">
-            <img src="C:\Users\Mary Joy\OneDrive\Desktop\DormMatch\logo.png" alt="DormMatch Logo" class="form-logo">
+            <img src="logo.png" alt="DormMatch Logo" class="form-logo">
             <h2>DormMatch</h2>
             <p>Please scan the QR code below to make your payment:</p>
-            <img src="C:\Users\Mary Joy\OneDrive\Desktop\DormMatch\qr.png" alt="QR Code" class="qr-code">
+            <img src="qr.png" alt="QR Code" class="qr-code">
             <a href="home.html" class="btn">Done</a>
         </form>
     </section>
