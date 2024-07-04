@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - DormMatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand img.logo {
+            width: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand img.logo:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+        }
+
+        .nav-item .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-item .nav-link:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .centered-section {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .payment-form {
+            display: inline-block;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .payment-form img.form-logo {
+            width: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .qr-code {
+            max-width: 300px;
+            margin: 1rem 0;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            background-color: #28a745;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                    <img src="logo.png" alt="DormMatch Logo" class="logo">
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item">
+                        <a href="#dorm" class="nav-link">Dorm</a>
+                        <div class="dropdown-content">
+                            <a href="dormsolo.html">Solo</a>
+                            <a href="dormshared.html">Shared</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
+                </ul>
+                <div class="navbar-buttons">
+                    <button class="btn btn-login" id="login-button">Login</button>
+                    <button class="btn btn-signup" id="signup-button">Sign Up</button>
+                    <a href="#account-profile" class="nav-link" id="account-profile" style="display: none;">Account Profile</a>
+                    <button class="btn btn-logout" id="logout-button" style="display: none;">Log Out</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="payment" class="centered-section">
+        <form class="payment-form">
+            <img src="C:\Users\Mary Joy\OneDrive\Desktop\DormMatch\logo.png" alt="DormMatch Logo" class="form-logo">
+            <h2>DormMatch</h2>
+            <p>Please scan the QR code below to make your payment:</p>
+            <img src="C:\Users\Mary Joy\OneDrive\Desktop\DormMatch\qr.png" alt="QR Code" class="qr-code">
+            <a href="home.html" class="btn">Done</a>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DormMatch. All rights reserved.</p>
+    </footer>
+</body>
+</html>
